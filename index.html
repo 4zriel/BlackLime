@@ -37,6 +37,8 @@ nav a:hover,nav a.on{color:var(--fg);border-color:var(--acc)}
 .ctl{display:flex;gap:8px}
 .btn{font:500 14px var(--mono);background:transparent;color:var(--fg);border:1px solid var(--edge);border-radius:999px;padding:0 16px;min-height:44px;cursor:pointer;display:inline-flex;align-items:center;text-decoration:none}
 .btn:hover{border-color:var(--acc);color:var(--fg)}
+.btn.icon{width:44px;padding:0;justify-content:center}
+:root[data-theme=dark] .i-moon,:root[data-theme=light] .i-sun{display:none}
 .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:40px;align-items:center;padding:72px 0 120px}
 h1{font-size:clamp(48px,7.4vw,104px);line-height:.95;letter-spacing:-.045em;font-weight:800;margin:0}
 .lead{font-size:21px;line-height:1.55;color:var(--body);max-width:560px;margin:32px 0 40px}
@@ -71,10 +73,10 @@ section.s{padding:112px 0;border-top:1px solid var(--line)}
 .proj{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:32px;align-items:center;background:var(--card);border:1px solid var(--edge);border-radius:24px;padding:40px;margin-top:40px}
 .proj h3{margin:0 0 8px;font-size:34px;letter-spacing:-.03em;font-weight:700}
 .proj p{margin:0;color:var(--body)}
-.pill{fill:var(--acc)}.cap{stroke:var(--fg)}
 .mail{display:inline-block;font-size:clamp(28px,5vw,64px);letter-spacing:-.035em;font-weight:700;margin-top:32px;text-decoration:none;border-bottom:3px solid var(--acc);line-height:1.15;overflow-wrap:anywhere}
-.links{display:flex;gap:28px;margin-top:32px;font:400 15px var(--mono);flex-wrap:wrap}
-.links a{color:var(--nav)}
+footer address{font-style:normal}
+footer .fl{display:flex;gap:24px}
+footer a{color:var(--nav)}footer a:hover{color:var(--acc)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);font:400 13px var(--mono);color:var(--mut)}
 @media (max-width:900px){
 .hero,.agent,.offer{grid-template-columns:minmax(0,1fr)}
@@ -95,7 +97,7 @@ section.s{padding:80px 0}
 <header><div class="wrap top">
 <a class="brand" href="#start" aria-label="Black Lime"><svg class="mark" width="36" height="36" viewBox="0 0 64 64" aria-hidden="true"><circle class="ml" cx="32" cy="32" r="30"></circle><circle class="mk" cx="32" cy="32" r="26.5"></circle><circle class="ml" cx="32" cy="32" r="24"></circle><g class="ms"><line x1="34" y1="32" x2="14.41" y2="15.67"></line><line x1="34" y1="32" x2="14.41" y2="48.33"></line><line x1="34" y1="32" x2="8" y2="32"></line></g><polyline class="mg" points="22,22 34,32 22,42"></polyline><rect class="mk" x="38" y="39" width="10" height="4.5"></rect></svg><span>Black Lime</span></a>
 <nav id="nav" aria-label="Sekcje"><a href="#oferta" data-i18n="n1">Oferta</a><a href="#agenci" data-i18n="n2">Agenci</a><a href="#stack" data-i18n="n3">Stack</a><a href="#projekty" data-i18n="n4">Projekty</a><a href="#kontakt" data-i18n="n5">Kontakt</a></nav>
-<div class="ctl"><button class="btn" id="lang" type="button">EN</button><button class="btn" id="theme" type="button"></button></div>
+<div class="ctl"><button class="btn" id="lang" type="button">EN</button><button class="btn icon" id="theme" type="button"><svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path></svg></button></div>
 </div></header>
 
 <main id="main">
@@ -136,7 +138,7 @@ section.s{padding:80px 0}
 <section id="projekty" class="s"><div class="wrap">
 <h2 data-i18n="h_pr">Projekty</h2>
 <div class="proj">
-<svg width="72" height="72" viewBox="0 0 64 64" role="img" aria-label="PharmaShift"><g transform="rotate(-45 32 32)" fill="none"><path class="pill" d="M32 18H18a14 14 0 0 0 0 28H32Z"></path><path class="cap" d="M32 19.5H46a12.5 12.5 0 0 1 0 25H32Z" stroke-width="3"></path></g></svg>
+<svg width="72" height="72" viewBox="0 0 64 64" role="img" aria-label="PharmaShift"><rect width="64" height="64" rx="16" fill="#0B0B0C"></rect><rect x="25" y="12" width="14" height="40" rx="7" fill="#C6F135"></rect><rect x="12" y="25" width="40" height="14" rx="7" fill="#C6F135"></rect><circle cx="32" cy="32" r="3.5" fill="#0B0B0C"></circle></svg>
 <div><h3>PharmaShift</h3><p data-i18n="pj">Modułowa aplikacja do zarządzania czasem pracy w aptece.</p></div>
 <a class="btn" href="https://pharmashift.blacklime.eu">pharmashift.blacklime.eu</a>
 </div>
@@ -145,24 +147,23 @@ section.s{padding:80px 0}
 <section id="kontakt" class="s"><div class="wrap">
 <h2 data-i18n="h_ct">Porozmawiajmy o projekcie</h2>
 <a class="mail" href="mailto:kontakt@blacklime.eu">kontakt@blacklime.eu</a>
-<div class="links"><a href="https://github.com/4zriel">github.com/4zriel</a><a href="https://www.linkedin.com/in/rafa%C5%82-k%C5%82osek">linkedin</a></div>
 </div></section>
 </main>
 
-<footer><div class="wrap"><span>© Black Lime</span><span data-i18n="foot">Jeden plik HTML, bez trackerów i zewnętrznych żądań</span></div></footer>
+<footer><div class="wrap"><span>© Black Lime</span><address>ul. Witosa 13/24, 40-832 Katowice, <span data-i18n="country">Polska</span></address><span class="fl"><a href="https://github.com/4zriel">GitHub</a><a href="https://www.linkedin.com/in/rafa%C5%82-k%C5%82osek">LinkedIn</a></span></div></footer>
 
 <script>
 (function(){
-var D={pl:{},en:{skip:'Skip to content',n1:'Services',n2:'Agents',n3:'Stack',n4:'Projects',n5:'Contact',h1:'Angular frontends. AI agents that do the work.',lead:'Black Lime designs and builds large Angular applications and AI agents that run in production: with tools, a log of every step and a human who approves the decisions that matter.',cta1:'Write about your project',cta2:'See the work',h_of:'What we do',o1:'Large frontends built to evolve for years: Nx monorepos, NgRx, signals and CI/CD that guards quality.',o2t:'AI agents',o2:'Agents with tools, workflows and a human in the loop, designed to be observable in production.',o3:'C# backends and Rust tooling where the product needs them.',h_ag:'How an agent works',ag:'The agent gets a goal, makes a plan and calls tools. Decisions that change something wait for a human to approve. Every step stays in the log, so you know what happened and why.',illu:'illustrative run',run:'Run again',h_pr:'Projects',pj:'Modular work-time management for pharmacies.',h_ct:'Let’s talk about your project',foot:'One HTML file, no trackers, no external requests'}};
+var D={pl:{},en:{skip:'Skip to content',n1:'Services',n2:'Agents',n3:'Stack',n4:'Projects',n5:'Contact',h1:'Angular frontends. AI agents that do the work.',lead:'Black Lime designs and builds large Angular applications and AI agents that run in production: with tools, a log of every step and a human who approves the decisions that matter.',cta1:'Write about your project',cta2:'See the work',h_of:'What we do',o1:'Large frontends built to evolve for years: Nx monorepos, NgRx, signals and CI/CD that guards quality.',o2t:'AI agents',o2:'Agents with tools, workflows and a human in the loop, designed to be observable in production.',o3:'C# backends and Rust tooling where the product needs them.',h_ag:'How an agent works',ag:'The agent gets a goal, makes a plan and calls tools. Decisions that change something wait for a human to approve. Every step stays in the log, so you know what happened and why.',illu:'illustrative run',run:'Run again',h_pr:'Projects',pj:'Modular work-time management for pharmacies.',h_ct:'Let’s talk about your project',country:'Poland'}};
 var RUN={pl:[['cel','uzgodnij grafik zmian na ten tydzień',''],['plan','3 kroki',''],['tool','fetch_schedule()','ok'],['tool','detect_conflicts()','2 konflikty'],['human','zatwierdzić zamianę?','tak'],['done','konflikty rozwiązane','']],en:[['goal','reconcile this week’s shifts',''],['plan','3 steps',''],['tool','fetch_schedule()','ok'],['tool','detect_conflicts()','2 found'],['human','approve swap?','yes'],['done','conflicts resolved','']]};
-var THEME={pl:{dark:'jasny',light:'ciemny',aria:'Zmień motyw'},en:{dark:'light',light:'dark',aria:'Toggle theme'}};
+var THEME={pl:{dark:'Włącz jasny motyw',light:'Włącz ciemny motyw'},en:{dark:'Switch to light theme',light:'Switch to dark theme'}};
 var root=document.documentElement,$=function(s){return document.querySelector(s)};
 function save(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
 var els=document.querySelectorAll('[data-i18n]');
 els.forEach(function(e){D.pl[e.dataset.i18n]=e.innerHTML});
 var lang='pl',calm=matchMedia('(prefers-reduced-motion: reduce)').matches,timers=[];
-function themeLabel(){var t=root.dataset.theme;$('#theme').textContent=THEME[lang][t];$('#theme').setAttribute('aria-label',THEME[lang].aria)}
+function themeLabel(){var l=THEME[lang][root.dataset.theme];$('#theme').setAttribute('aria-label',l);$('#theme').title=l}
 function setLang(l){lang=l;root.lang=l;els.forEach(function(e){e.innerHTML=D[l][e.dataset.i18n]});$('#lang').textContent=l==='pl'?'EN':'PL';$('#lang').setAttribute('aria-label',l==='pl'?'Switch to English':'Przełącz na polski');themeLabel();render(true);save('bl-lang',l)}
 function setTheme(t){root.dataset.theme=t;themeLabel();save('bl-theme',t)}
 $('#lang').onclick=function(){setLang(lang==='pl'?'en':'pl')};
